@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<script>
+function callServlet()
+{
+	var servletname = document.form1.register.value;
+	
+	if(servletname=="")
+		{
+			alert("No value..");
+			return false;
+		}
+	else
+		{
+			alert("value"+servletname);
+			document.location.href="table.html";
+			return false;
+		}
+	}
+</script>
+<body>
+<form action = "table.html" method = "post"> 
+
+<table>
+<h2> <i> Please enter your PRN to get result</i></h2>
+<tr> 
+<td> PRN </td> 
+<td> <input type = "number" name= "number"> </td>
+</tr>
+
+<tr>
+<td> <input type = "Submit" values = "Search PRN" onclick = "return callServlet()";> </td>
+</tr>
+</table>
+</form>
+</body>
+</html>
